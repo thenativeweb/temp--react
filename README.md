@@ -37,10 +37,18 @@
 
 ## Setting up a project
 
+### Create React App
+
 ```shell
 # As vanilla JavaScript project
 $ npx create-react-app <application-name>
 
 # As TypeScript project
 $ npx create-react-app <application-name> --template typescript
+```
+
+### Next.js
+
+```shell
+$ npx create-next-app <application-name> --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
 ```
