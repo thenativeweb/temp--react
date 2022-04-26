@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import styles from './Todo.module.css';
 
 interface TodoProps {
   id: string;
@@ -7,7 +8,7 @@ interface TodoProps {
 
 const Todo: FunctionComponent<TodoProps> = function ({ id, description }) {
   return (
-    <div key={ id }>{ description }</div>
+    <div className={ styles.todo }>{ description }</div>
   );
 }
 

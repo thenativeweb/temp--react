@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import { createTodoList } from './elements/createTodoList';
 import { Header } from './layout/Header';
 import { Todo } from './domain/Todo';
-import { TodoList } from './domain/TodoList';
+import { VerticalStack } from './layout/VerticalStack';
 
 const App: FunctionComponent = function () {
   const title = 'TODOs';
@@ -15,13 +15,13 @@ const App: FunctionComponent = function () {
   return (
     <div>
       <Header title={ title } />
-      <TodoList>
+      <VerticalStack>
         {
           todoList.getAllTodos().map(todo => (
             <Todo key={ todo.id } id={ todo.id } description={ todo.description } />
           ))
         }
-      </TodoList>
+      </VerticalStack>
     </div>
   );
 };
