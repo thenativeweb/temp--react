@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/node": "17.0.27",
+    "@types/react": "18.0.7",
+    "@types/react-dom": "18.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "typescript": "4.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -13,7 +17,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [ "react-app" ]
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [

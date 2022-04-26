@@ -38,5 +38,9 @@
 ## Setting up a project
 
 ```shell
+# As vanilla JavaScript project
 $ npx create-react-app <application-name>
+
+# As TypeScript project
+$ npx create-react-app <application-name> --template typescript
 ```
