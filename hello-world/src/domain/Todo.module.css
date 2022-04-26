@@ -6,3 +6,16 @@
   border-bottom: 1px solid #cccccc;
   width: 90%;
 }
+
+.edit {
+  background-color: transparent;
+  border: none;
+  font-family: sans-serif;
+  font-size: 100%;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.edit:focus, .edit:hover {
+  text-decoration: underline;
+}

@@ -1,24 +1,43 @@
-import { FunctionComponent } from 'react';
-import { createTodoList } from './elements/createTodoList';
+import { FunctionComponent, useState } from 'react';
 import { Header } from './layout/Header';
-import { Todo } from './domain/Todo';
+import { Todo } from './elements/Todo';
+import { Todo as TodoComponent } from './domain/Todo';
 import { VerticalStack } from './layout/VerticalStack';
 
-const App: FunctionComponent = function () {
-  const title = 'TODOs';
-  const todoList = createTodoList();
+interface AppProps {
+  initialTodos: Todo[];
+}
 
-  todoList.note({ description: 'Show all these todos' });
-  todoList.note({ description: 'Have lunch' });
-  todoList.note({ description: 'Make todos editable' });
+const App: FunctionComponent<AppProps> = function ({ initialTodos }) {
+  const title = 'TODOs';
+  const [ todos, setTodos ] = useState<Todo[]>(initialTodos);
+
+  const handleTodoEdit = function ({ id, description }: {
+    id: string;
+    description: string;
+  }) {
+    const newTodos = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, description };
+      }
+
+      return todo;
+    });
+
+    setTodos(newTodos);
+  };
 
   return (
     <div>
       <Header title={ title } />
       <VerticalStack>
         {
-          todoList.getAllTodos().map(todo => (
-            <Todo key={ todo.id } id={ todo.id } description={ todo.description } />
+          todos.map(todo => (
+            <TodoComponent
+              key={ todo.id }
+              id={ todo.id }
+              initialDescription={ todo.description }
+              onEdit={ handleTodoEdit } />
           ))
         }
       </VerticalStack>
