@@ -50,5 +50,25 @@ $ npx create-react-app <application-name> --template typescript
 ### Next.js
 
 ```shell
+# As vanilla JavaScript project
 $ npx create-next-app <application-name> --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
 ```
+
+## Next steps
+
+- Build components
+  - Use props
+  - Use state
+  - Handle events
+  - Raise events
+  - Use conditional rendering
+  - Use lists and keys
+  - Use forms
+- Identify and locate state **THIS IS THE MOST IMPORTANT THING**
+  - Separate presentation components from smart components
+- Advanced things
+  - Contexts (for things such as authentication, i18n, logging, theming, …)
+  - Refs (integrating with non-React components, e.g. jQuery)
+  - Performance optimization and profiling, and debugging
+  - Hooks (`useEffect`, `useCallback`, `useMemo`, `useReducer`, …)
+  - Testing (e.g. for component testing, see `React Testing Library`)
