@@ -1,17 +1,14 @@
 import { FunctionComponent } from 'react';
-import { Todo } from '../elements/Todo';
 
 interface TodoListProps {
-  todos: Todo[];
+  children: React.ReactNode;
 }
 
-const TodoList: FunctionComponent<TodoListProps> = function ({ todos }) {
+const TodoList: FunctionComponent<TodoListProps> = function ({ children }) {
   return (
-    <ul>
-      { todos.map(todo => (
-        <li key={ todo.id }>{ todo.description }</li>
-      )) }
-    </ul>
+    <div>
+      { children }
+    </div>
   );
 };
 

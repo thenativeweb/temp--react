@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import './Header.css';
 
 interface HeaderProps {
   title: string;
@@ -6,7 +7,7 @@ interface HeaderProps {
 
 const Header: FunctionComponent<HeaderProps> = function ({ title }) {
   return (
-    <div>
+    <div className='Header'>
       <h1>{ title }</h1>
     </div>
   );
